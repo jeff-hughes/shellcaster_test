@@ -17,7 +17,7 @@ jobs:
           profile: minimal
           toolchain: stable
           override: true
-      - run: cargo check --verbose --locked
+      - run: cargo check --verbose
   test:
     name: Run tests
     runs-on: ubuntu-latest
@@ -28,4 +28,4 @@ jobs:
           profile: minimal
           toolchain: stable
           override: true
-      - run: cargo test --locked
+      - run: cargo test --verbose
