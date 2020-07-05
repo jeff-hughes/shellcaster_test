@@ -13,7 +13,7 @@ pub struct Details {
 
 #[derive(Debug)]
 pub struct Panel {
-    pub window: Vec<(String, u32, ColorType)>,
+    pub window: Vec<(String, pancurses::chtype, ColorType)>,
     pub screen_pos: usize,
     pub colors: Colors,
     pub title: String,
@@ -177,7 +177,7 @@ impl Panel {
                                 // extra for some reason...
     }
 
-    pub fn get_row(&self, row: usize) -> (String, u32, ColorType) {
+    pub fn get_row(&self, row: usize) -> (String, pancurses::chtype, ColorType) {
         return self.window[row].clone();
     }
 }
