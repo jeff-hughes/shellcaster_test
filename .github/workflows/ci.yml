@@ -7,19 +7,8 @@ on:
     branches: [ master ]
 
 jobs:
-  check:
-    name: Check
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v2
-      - uses: actions-rs/toolchain@v1
-        with:
-          profile: minimal
-          toolchain: stable
-          override: true
-      - run: cargo check --verbose
   test:
-    name: Run tests
+    name: Check and run tests
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
@@ -28,4 +17,7 @@ jobs:
           profile: minimal
           toolchain: stable
           override: true
+      - run: apt update
+      - run: apt install libncurses5-dev libncursesw5-dev
+      - run: cargo check --verbose
       - run: cargo test --verbose
