@@ -68,7 +68,7 @@ jobs:
           profile: minimal
           toolchain: stable
           override: true
-      - run: brew install ncurses
+      # - run: brew install ncurses
       - name: Build project
         run: |
           cargo build --release --locked
