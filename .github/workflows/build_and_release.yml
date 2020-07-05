@@ -20,7 +20,7 @@ jobs:
         with:
           tag_name: ${{ github.ref }}
           release_name: Release ${{ github.ref }}
-          body: Shellcaster release, ${{ github.ref }}
+          body: Please see the changelog for details about this new release.
           draft: false
           prerelease: false
     outputs:
@@ -68,7 +68,7 @@ jobs:
           profile: minimal
           toolchain: stable
           override: true
-      - run: sudo brew install ncurses
+      - run: brew install ncurses
       - name: Build project
         run: |
           cargo build --release --locked
