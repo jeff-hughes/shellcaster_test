@@ -82,3 +82,5 @@ Contributions from others are welcome! If you wish to contribute, feel free to c
 ## Why "shellcaster"?
 
 I was trying to come up with a play on the word "podcast", and I liked the use of the word "shell" for several reasons. "Shell" is a synonym for the word "pod". The terminal is also referred to as a shell (and shellcaster is a terminal-based program). In addition, the program is built on Rust, whose mascot is Ferris the crab. Finally, I just personally enjoy that "shellcaster" sounds a lot like "spellcaster", so you can feel like a wizard when you use the program...
+
+I'm simulating a new release! Hooray!
