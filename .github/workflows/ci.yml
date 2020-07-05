@@ -17,7 +17,7 @@ jobs:
           profile: minimal
           toolchain: stable
           override: true
-      - run: apt update
-      - run: apt install libncurses5-dev libncursesw5-dev
+      - run: sudo apt-get update
+      - run: sudo apt-get install libncurses5-dev libncursesw5-dev
       - run: cargo check --verbose
       - run: cargo test --verbose
