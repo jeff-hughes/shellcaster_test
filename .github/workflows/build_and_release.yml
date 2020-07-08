@@ -27,7 +27,7 @@ jobs:
       upload_url: ${{ steps.create_release.outputs.upload_url }}
 
   build-linux-x86_64:
-    name: Build Linux release assets
+    name: Build Linux x86_64 release assets
     needs: release
     runs-on: ubuntu-latest
     steps:
@@ -58,9 +58,11 @@ jobs:
           asset_content_type: application/gzip
 
   build-linux-aarch64:
-    name: Build Linux release assets
+    name: Build Linux aarch64 release assets
     needs: release
     runs-on: ubuntu-latest
+    env:
+      CROSS_DOCKER_IN_DOCKER: true
     steps:
       - uses: actions/checkout@v2
       - uses: actions-rs/toolchain@v1
